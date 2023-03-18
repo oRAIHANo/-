@@ -1,3 +1,3 @@
-# Portfoilio Website
+# Portfolio Website
 
 https://oraihano.github.io/-/
