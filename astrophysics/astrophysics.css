@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Potta+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Secular One', sans-serif;
+}
+
+/* SCROLLBAR */
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: gold black;
+    scrollbar-width: normal;
+    background-color: white;
+}
+
+html::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: rgb(36, 35, 35);
+    border-radius: 0px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* CSS CODE FOR NAVBAR SECTION */
+nav {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    z-index: 1000;
+    overflow-y: hidden;
+
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+#click {
+    display: none;
+}
+
+.navbar ul li {
+    font-size: 30px;
+    margin: 20px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover {
+    font-size: 40px;
+    transition: 0.5s;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul li a:active {
+    color: gold;
+}
+
+.navbar .menu-btn i {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#click:checked~.menu-btn i:before {
+    content: "\f00d";
+}
+
+/* RESPONSIVE CODE FOR NAVBAR SECTION */
+@media (max-width: 1200px) {
+    nav {
+        justify-content: center;
+    }
+
+    .navbar ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        transition: 0.5s ease;
+    }
+
+    #click:checked~ul {
+        left: 0%;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        margin: 40px 0;
+        color: white;
+    }
+
+    .navbar ul li:hover {
+        font-size: 40px;
+        transition: 0.5s;
+        color: black;
+    }
+
+    .navbar .menu-btn i {
+        display: block;
+        position: fixed;
+        top: 30px;
+        right: 70px;
+    }
+}
+
+
+/* CSS CODE FOR LOGO */
+.logo {
+    height: 80px;
+    width: 150px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    color: white;
+    z-index: 1000;
+    text-align: center;
+
+}
+
+.logo i {
+    font-size: 30px;
+    transition: 0.5s;
+    margin-top: 15px;
+}
+
+.logo i:hover {
+    font-size: 40px;
+    transition: 0.5s;
+}
+
+.logo .fa-gear {
+    color: gold;
+    font-size: 40px;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 50px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+section {
+    height: 300vh;
+    width: 100%;
+    background-color: black;
+}
+
+.container {
+    height: 250vh;
+    width: 90%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.info {
+    height: 60vh;
+    width: 70%;
+}
+
+.info h1 {
+    color: white;
+    font-weight: 10;
+}
+
+.info p {
+    color: white;
+    font-size: 20px;
+    font-weight: 10;
+}
+
+.image {
+    height: 60vh;
+    width: 30%;
+    transition: 0.5s;
+}
+
+.image:hover {
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+#image-1 {
+    background-image: url('../images/astrophysicist.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    height: 200px;
+    width: 300px;
+    margin: auto;
+}
+
+#image-2 {
+    background-image: url('../images/astro.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: left;
+    background-position-y: top;
+    height: 400px;
+    width: 300px;
+    margin: auto;
+}
+
+#image-3 {
+    background-image: url('../images/blackhole-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    height: 200px;
+    width: 300px;
+    margin: auto;
+}
+
+#image-4 {
+    background-image: url('../images/space-work-page.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    height: 200px;
+    width: 300px;
+    margin: auto;
+}
+
+
+#content-1 {
+    height: 120vh;
+}
+
+#info-1 {
+    height: 100%;
+}
+
+#content-2 {
+    height: 60vh;
+}
+
+#info-2 {
+    height: 100%;
+}
+
+#content-3 {
+    height: 70vh;
+}
+
+#info-3 {
+    height: 100%;
+}
+
+
+@media (max-width:1300px) {
+    section{
+        height: 650vh;
+    }
+
+    .container {
+        height: 600vh;
+        width: 80%;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .info {
+        width: 100%;
+    }
+    
+    .image {
+        display: none;
+    }
+
+    #content-1 {
+        height: 270vh;
+    }
+
+    #content-2 {
+        height: 150vh;
+    }
+    
+    #content-3 {
+        height: 180vh;
+    }
+    
+    #content-4 {
+        height: 150vh;
+    }
+    
+}
